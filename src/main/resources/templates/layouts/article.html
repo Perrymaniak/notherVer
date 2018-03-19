@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>&lt;Hello World/&gt;</title>
+    <!--Style-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"  media="screen,projection"/>
+    <!--END Style-->
+    <meta name="theme-color" content="#272822">
+    <link rel="icon" sizes="192x192" href="../img/hello-world-ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <!--Nawigacja-->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">
+            <img src="../img/hello-world.jpg" alt="logo">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <!--Wersja desktopowa-->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">{{Kategoria1}}</a></li>
+            <li><a href="#">{{Kategoria2}}</a></li>
+            <li><a href="#">{{Kategoria3}}</a></li>
+            <li><a href="#">{{Kategoria4}}</a></li>
+            <li><a id='logowanie' class="white-text modal-trigger" href='#modal-logowanie'>Logowanie</a></li>
+            <li><a id='rejestracja' class="white-text modal-trigger" href='#modal-rejestracja'>Rejestracja</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--END Wersja desktopowa-->
+    <!--Wersja mobilna-->
+    <ul class="side-nav" id="mobile-demo">
+      <li><a class="brand-logo" href="#"><img src="../img/hello-world-small.jpg" alt="logo"></a></li>
+      <li><a href="#">{{Kategoria1}}</a></li>
+      <li><a href="#">{{Kategoria2}}</a></li>
+      <li><a href="#">{{Kategoria3}}</a></li>
+      <li><a href="#">{{Kategoria4}}</a></li>
+      <div class="divider"></div>
+      <li><a id='logowanie' class="modal-trigger" href='#modal-logowanie'>Logowanie</a></li>
+      <li><a id='rejestracja' class="modal-trigger" href='#modal-rejestracja'>Rejestracja</a></li>
+    </ul>
+    <!--END Wersja mobilna-->
+    <!--END Nawigacja-->
+    <!--Content-->
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l8">
+          <div class="card articleCard">
+            <div class="card-image">
+              <img src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2016/08/Elke-Vogelsang-dog-photography-inquisitive-nature-600x400.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content flow-text bold">
+              I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.
+            </div>
+            <div class="card-content flow-text">
+              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4">
+          <div class="card profileCard">
+            <div class="card-image">
+              <img class="circle" src="https://www.totaltele.com/res/image/_tto%20news%20images/people%20headshots/satya%20nadella.png">
+              <span class="card-title">To sem JA</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Go to profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--END Content-->
+    <!--Modal Logowanie-->
+    <div id="modal-logowanie" class="modal">
+      <div class="modal-content">
+        <h4 class="center-align">Zaloguj</h4>
+        <!--Formularz logowania-->
+        <div class="row .modal-form-row">
+          <form class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="Logowanie-login" type="text" class="validate" required>
+                <label for="Logowanie-login">Login</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="Logowanie-password" type="password" class="validate" required>
+                <label for="Logowanie-password">Password</label>
+              </div>
+            </div>
+            <div class="row center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Zaloguj
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          </form>
+        </div>
+        <!-- END Formularz logowania-->
+      </div>
+    </div>
+    <!--END Modal Logowanie-->
+    <!--Modal Rejestracja-->
+    <div id="modal-rejestracja" class="modal">
+      <div class="modal-content">
+        <h4 class="center-align">Zarejestruj</h4>
+        <!--Formularz rejestracji-->
+        <div class="row .modal-form-row">
+          <form class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="Rejestracja-login" type="text" class="validate" required>
+                <label for="Rejestracja-login">Login</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="Rejestracja-password" type="password" class="validate" required>
+                <label for="Rejestracja-password">Hasło</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="Rejestracja-password-ponownie" type="password" class="validate" required>
+                <label for="Rejestracja-password-ponownie" data-error="Hasła nie są takie same" data-success="Hasła identyczne">Powtórz hasło</label>
+              </div>
+            </div>
+            <div class="row center-align">
+            <button id='rejestracja-button' class="btn waves-effect waves-light disabled" type="submit" name="action">Zarejestruj
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          </form>
+        </div>
+        <!-- END Formularz rejestracji-->
+      </div>
+    </div>
+    <!--END Modal Rejestracja-->
+    <!--Skrypty-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <!--END Skrypty-->
+  </body>
+</html>
