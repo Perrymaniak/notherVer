@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>&lt;Hello World/&gt;</title>
+    <!--Style-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"  media="screen,projection"/>
+    <!--END Style-->
+    <meta name="theme-color" content="#272822">
+    <link rel="icon" sizes="192x192" href="../img/hello-world-ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115897352-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115897352-1');
+    </script>
+  </head>
+  <body>
+    <!--Nawigacja-->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">
+            <img src="../img/hello-world.jpg" alt="logo">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <!--Wersja desktopowa-->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">{{Kategoria1}}</a></li>
+            <li><a href="#">{{Kategoria2}}</a></li>
+            <li><a href="#">{{Kategoria3}}</a></li>
+            <li><a href="#">{{Kategoria4}}</a></li>
+            <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+            <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--END Wersja desktopowa-->
+    <!--Wersja mobilna-->
+    <ul class="side-nav" id="mobile-demo">
+      <li><a class="brand-logo" href="#"><img src="../img/hello-world-small.jpg" alt="logo"></a></li>
+      <li><a href="#">{{Kategoria1}}</a></li>
+      <li><a href="#">{{Kategoria2}}</a></li>
+      <li><a href="#">{{Kategoria3}}</a></li>
+      <li><a href="#">{{Kategoria4}}</a></li>
+      <div class="divider"></div>
+      <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+      <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+    </ul>
+    <!--END Wersja mobilna-->
+    <!--END Nawigacja-->
+    <!--Content-->
+	    <div class="container">
+	      <div class="row">
+					<div class="row .modal-form-row">
+						<form class="col s12 m8 offset-m2 l6 offset-l3 card">
+							<div class="row">
+								<h3 class="center-align">Zarejestruj</h3>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">account_circle</i>
+									<input id="Rejestracja-login" type="text" class="validate" name='username' required>
+									<label for="Rejestracja-login">Login</label>
+								</div>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">lock_outline</i>
+									<input id="Rejestracja-password" type="password" class="validate" name='password' required>
+									<label for="Rejestracja-password">Hasło</label>
+								</div>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">lock_outline</i>
+									<input id="Rejestracja-password-ponownie" type="password" class="validate" name='password-retype' required>
+									<label for="Rejestracja-password-ponownie" data-error="Hasła nie są takie same" data-success="Hasła identyczne">Powtórz hasło</label>
+								</div>
+							</div>
+							<div class="row center-align">
+							<button id='rejestracja-button' class="btn waves-effect waves-light disabled" type="submit" name="action" onclick="getLoginFormValues()">Zarejestruj
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+    <!--Skrypty-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script>
+    <script>
+    function getRegisterFormValues() {
+      var username = document.forms[0]["username"].value;
+      var password = document.forms[0]["password"].value;
+      var passwordRetype = document.forms[0]["password-retype"].value;
+      var dataRegister = {
+        username: username,
+        password: password,
+        passwordRetype: passwordRetype
+      };
+      var output = JSON.stringify(dataLogin);
+      return output;
+    };
+    </script>
+    </script>
+    <!--END Skrypty-->
+  </body>
+</html>

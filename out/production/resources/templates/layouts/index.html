@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>&lt;Hello World/&gt;</title>
+    <!--Style-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"  media="screen,projection"/>
+    <!--END Style-->
+    <meta name="theme-color" content="#272822">
+    <link rel="icon" sizes="192x192" href="../img/hello-world-ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115897352-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115897352-1');
+    </script>
+  </head>
+  <body>
+    <!--Nawigacja-->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">
+            <img src="../img/hello-world.jpg" alt="logo">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <!--Wersja desktopowa-->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">{{Kategoria1}}</a></li>
+            <li><a href="#">{{Kategoria2}}</a></li>
+            <li><a href="#">{{Kategoria3}}</a></li>
+            <li><a href="#">{{Kategoria4}}</a></li>
+            <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+            <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--END Wersja desktopowa-->
+    <!--Wersja mobilna-->
+    <ul class="side-nav" id="mobile-demo">
+      <li><a class="brand-logo" href="#"><img src="../img/hello-world-small.jpg" alt="logo"></a></li>
+      <li><a href="#">{{Kategoria1}}</a></li>
+      <li><a href="#">{{Kategoria2}}</a></li>
+      <li><a href="#">{{Kategoria3}}</a></li>
+      <li><a href="#">{{Kategoria4}}</a></li>
+      <div class="divider"></div>
+      <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+      <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+    </ul>
+    <!--END Wersja mobilna-->
+    <!--END Nawigacja-->
+    <!--Content-->
+    <div class="container artykuly">
+      <div class="row">
+<!--Ogólnie to będzie tak:
+1.  W linijce nr 2 artykułu tam gdzie jest href='#' zamieniamy # na adres lokalny artykułu. Czyli np posts/art123.html Tu już masz pole do popisu.
+2.  Do wszystkich divów o klasie "kategoria" należy dodać 1 klasę do wyboru z kategorii. Narazie zrobiłem:
+  -sport
+  -rozrywka
+  -technologie
+  -ludzie
+  Potrenuj tworzenie artykułu z różnymi kategoriami. Tekst tam będzie się generował automatycznie. Wystarczy nadać temu divowi klasę dodatkową zgodnie z zapisaną kategorią w bazie.
+3. w img obrazek z bazy ssiemy
+4. div z klasą card-title  zasysamy tutaj tytuł
+5. p z klasą flow-text tam zasysamy część artykułu. Dlaczego część? podczas pisania artykułu zrobię 2 pola tekstowe na wstęp (headline) i główną część artykułu. Pierwszą część zassiemy do tej karty, druga będzie widoczna po otworzeniu linku. Wiem że to wygląda idiotycznie ale zaufaj mi.
+
+a.)tytuł
+b.)Tekst pod tytułem (ten co trafi w skrócie na stronę główną.)
+c.)Tekst zwykły
+
+P.S.
+Nie ma co się bać dawać całego tekstu podtytułem i bawić się w jego wycinanie czy coś. Ja to już zrobiłem. Jak zmniejszysz sobie okno, to zobaczysz, że automatycznie zjada tekst, który się nie mieści. Zrobiłem ograniczenie na 3 linijki.
+-->
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria sport"></div>
+                <img src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2016/08/Elke-Vogelsang-dog-photography-inquisitive-nature-600x400.jpg">
+                <span class="card-title">{{article.title}}</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria rozrywka"></div>
+                <img src="http://www.elementsofstyleblog.com/wp-content/uploads/2010/02/600x400-princeville-sunset.jpg">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria technologie"></div>
+                <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2015/03/17/102512937-498619551.600x400.jpg?v=1426619700">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria ludzie"></div>
+                <img src="http://roztocze.net/wp-content/uploads/2017/12/14Iluminacje-fot.-Milena-Kuldath-4564539335-1160x773-600x400.jpg">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria sport"></div>
+                <img src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2016/08/Elke-Vogelsang-dog-photography-inquisitive-nature-600x400.jpg">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria rozrywka"></div>
+                <img src="http://www.elementsofstyleblog.com/wp-content/uploads/2010/02/600x400-princeville-sunset.jpg">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria technologie"></div>
+                <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2015/03/17/102512937-498619551.600x400.jpg?v=1426619700">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+<!--Artykuł do wygenerowania-->
+        <div class="col s12 m6 l4">
+          <a href='#'>
+            <div class="card">
+              <div class="card-image">
+                <div class="kategoria ludzie"></div>
+                <img src="http://roztocze.net/wp-content/uploads/2017/12/14Iluminacje-fot.-Milena-Kuldath-4564539335-1160x773-600x400.jpg">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p class="flow-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--END Content-->
+    <!--Skrypty-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <!--END Skrypty-->
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>&lt;Hello World/&gt;</title>
+    <!--Style-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"  media="screen,projection"/>
+    <!--END Style-->
+    <meta name="theme-color" content="#272822">
+    <link rel="icon" sizes="192x192" href="../img/hello-world-ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115897352-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115897352-1');
+    </script>
+  </head>
+  <body>
+    <!--Nawigacja-->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">
+            <img src="../img/hello-world.jpg" alt="logo">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <!--Wersja desktopowa-->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">{{Kategoria1}}</a></li>
+            <li><a href="#">{{Kategoria2}}</a></li>
+            <li><a href="#">{{Kategoria3}}</a></li>
+            <li><a href="#">{{Kategoria4}}</a></li>
+            <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+            <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--END Wersja desktopowa-->
+    <!--Wersja mobilna-->
+    <ul class="side-nav" id="mobile-demo">
+      <li><a class="brand-logo" href="#"><img src="../img/hello-world-small.jpg" alt="logo"></a></li>
+      <li><a href="#">{{Kategoria1}}</a></li>
+      <li><a href="#">{{Kategoria2}}</a></li>
+      <li><a href="#">{{Kategoria3}}</a></li>
+      <li><a href="#">{{Kategoria4}}</a></li>
+      <div class="divider"></div>
+      <li><a id='logowanie' href='logowanie.html'>Logowanie</a></li>
+      <li><a id='rejestracja' href='rejestracja.html'>Rejestracja</a></li>
+    </ul>
+    <!--END Wersja mobilna-->
+    <!--END Nawigacja-->
+    <!--Content-->
+    <div class="container profileCard">
+      <div class="row">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
+          <div class="card center">
+            <div class="card-content">
+              <img class="circle" src="https://www.totaltele.com/res/image/_tto%20news%20images/people%20headshots/satya%20nadella.png">
+              <h3>To sem ja</h3>
+            </div>
+            <div class="card-content flow-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum mi tellus, fermentum bibendum eros consequat non. Aliquam at porttitor velit, quis mollis lacus. Sed sodales sapien nec iaculis placerat. Suspendisse lorem velit, luctus vel viverra in, interdum et lacus. Sed posuere enim quis luctus varius. Quisque sed sem posuere, pulvinar diam id, elementum urna. Suspendisse in ante nisl. Vivamus tellus purus, dapibus et metus in, finibus porttitor nisi. Fusce metus nulla, convallis vel nulla sit amet, mattis auctor leo. Etiam id facilisis quam. Morbi non magna et mauris vestibulum efficitur. Quisque vehicula elementum mattis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END Content-->
+    <!--Skrypty-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <!--END Skrypty-->
+  </body>
+</html>
