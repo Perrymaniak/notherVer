@@ -17,7 +17,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-115897352-1');
     </script>
   </head>
@@ -56,79 +55,58 @@
     </ul>
     <!--END Wersja mobilna-->
     <!--END Nawigacja-->
-<!--Content-->
-
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-content">
-              <div class="row">
-
-                <h3 class="center">Dodaj post</h3>
-
-                <form action="#">
-
-                  <div  id="file" class="file-field input-field col s12 m6">
-                    <div class="btn">
-                      <span>Zdjęcie</span>
-                      <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text">
-                    </div>
-                  </div>
-
-
-                  <div id="select" class="input-field col s12 m6">
-                    <select>
-                      <option value="" disabled selected>Wybierz kategorię</option>
-                      <option value="1">Sport</option>
-                      <option value="2">Rozrywka</option>
-                      <option value="3">Technologie</option>
-                      <option value="4">Ludzie</option>
-                    </select>
-                  </div>
-
-                  <div class="col s12">
-                      <div class="input-field col s12 m6 offset-m3">
-                        <input id="input_text" type="text" data-length="25">
-                        <label for="input_text">Tytuł</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
-                        <label for="textarea1">Wstęp</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <textarea id="textarea2" class="materialize-textarea" data-length="1000"></textarea>
-                        <label for="textarea1">Rozwinięcie</label>
-                      </div>
-                  </div>
-
-                  <div class="col s12 center-align">
-                    <button class="btn waves-effect waves-light black" onclick="Materialize.toast('Dodano post', 4000)" type="submit" name="action">
-                      Dodaj post
-                      <i class="material-icons right">send</i>
-                    </button>
-                  </div>
-
-                </form>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--END Content-->
+    <!--Content-->
+	    <div class="container">
+	      <div class="row">
+					<div class="row .modal-form-row">
+						<form class="col s12 m8 offset-m2 l6 offset-l3 card">
+							<div class="row">
+								<h3 class="center-align">Zarejestruj</h3>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">account_circle</i>
+									<input id="Rejestracja-login" type="text" class="validate" name='username' required>
+									<label for="Rejestracja-login">Login</label>
+								</div>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">lock_outline</i>
+									<input id="Rejestracja-password" type="password" class="validate" name='password' required>
+									<label for="Rejestracja-password">Hasło</label>
+								</div>
+								<div class="input-field col s12 m8 offset-m2">
+									<i class="material-icons prefix">lock_outline</i>
+									<input id="Rejestracja-password-ponownie" type="password" class="validate" name='password-retype' required>
+									<label for="Rejestracja-password-ponownie" data-error="Hasła nie są takie same" data-success="Hasła identyczne">Powtórz hasło</label>
+								</div>
+							</div>
+							<div class="row center-align">
+							<button id='rejestracja-button' class="btn waves-effect waves-light disabled" type="submit" name="action" onclick="getLoginFormValues()">Zarejestruj
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
     <!--Skrypty-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../assets/materialize.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script>
+    <script>
+    function getRegisterFormValues() {
+      var username = document.forms[0]["username"].value;
+      var password = document.forms[0]["password"].value;
+      var passwordRetype = document.forms[0]["password-retype"].value;
+      var dataRegister = {
+        username: username,
+        password: password,
+        passwordRetype: passwordRetype
+      };
+      var output = JSON.stringify(dataLogin);
+      return output;
+    };
+    </script>
+    </script>
     <!--END Skrypty-->
   </body>
 </html>

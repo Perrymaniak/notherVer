@@ -10,8 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-//@Configuration
-//@EnableAutoConfiguration
+@Configuration
+@EnableAutoConfiguration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -26,22 +26,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        http.authorizeRequests().antMatchers("/","/layouts/index").permitAll().antMatchers("/admin").hasRole("ADMIN")
+        http.authorizeRequests()
+                .antMatchers("/","/logowanie","/css/**","/assets/**","/fonts/**","/img/**","/js/**","/scss/**","/rejestracja","/artykul").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and().formLogin()
-                .loginPage("/works/login")
+                .loginPage("/logowanie")
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll();
-        http.exceptionHandling().accessDeniedPage("/403");
     }
 
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
 
 }
 

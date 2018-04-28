@@ -1,7 +1,7 @@
 $( document ).ready(function(){
-  $('.modal').modal()
-  $(".button-collapse").sideNav({edge: 'right'})
-  $('select').material_select();
+    $('.modal').modal()
+    $(".button-collapse").sideNav({edge: 'right'})
+    $('select').material_select();
 });
 //Password Validation
 $("#Rejestracja-password").on("focusout", function (e) {
@@ -23,3 +23,25 @@ $("#Rejestracja-password-ponownie").on("keyup", function (e) {
         $("#rejestracja-button").removeClass("disabled");
     }
 });
+
+function getRegisterFormValues () {
+    var username = document.forms[0]["username"].value;
+    var password = document.forms[0]["password"].value;
+    var passwordRetype = document.forms[0]["password-retype"].value;
+    var dataRegister = {
+        username: username,
+        password: password,
+        passwordRetype: passwordRetype
+    };
+    return JSON.stringify(dataRegister);
+}
+
+getLoginFormValues = function() {
+    var username = document.forms[0].username.value;
+    var password = document.forms[0].password.value;
+    var dataLogin = {
+        username: username,
+        password: password
+    };
+    return JSON.stringify(dataLogin);
+}

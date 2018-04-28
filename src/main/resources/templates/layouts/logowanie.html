@@ -56,79 +56,52 @@
     </ul>
     <!--END Wersja mobilna-->
     <!--END Nawigacja-->
-<!--Content-->
-
-
-
+    <!--Content-->
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-content">
-              <div class="row">
-
-                <h3 class="center">Dodaj post</h3>
-
-                <form action="#">
-
-                  <div  id="file" class="file-field input-field col s12 m6">
-                    <div class="btn">
-                      <span>Zdjęcie</span>
-                      <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text">
-                    </div>
-                  </div>
-
-
-                  <div id="select" class="input-field col s12 m6">
-                    <select>
-                      <option value="" disabled selected>Wybierz kategorię</option>
-                      <option value="1">Sport</option>
-                      <option value="2">Rozrywka</option>
-                      <option value="3">Technologie</option>
-                      <option value="4">Ludzie</option>
-                    </select>
-                  </div>
-
-                  <div class="col s12">
-                      <div class="input-field col s12 m6 offset-m3">
-                        <input id="input_text" type="text" data-length="25">
-                        <label for="input_text">Tytuł</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
-                        <label for="textarea1">Wstęp</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <textarea id="textarea2" class="materialize-textarea" data-length="1000"></textarea>
-                        <label for="textarea1">Rozwinięcie</label>
-                      </div>
-                  </div>
-
-                  <div class="col s12 center-align">
-                    <button class="btn waves-effect waves-light black" onclick="Materialize.toast('Dodano post', 4000)" type="submit" name="action">
-                      Dodaj post
-                      <i class="material-icons right">send</i>
-                    </button>
-                  </div>
-
-                </form>
-                
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <!--END Content-->
+			<div class="container">
+        <div class="row .modal-form-row">
+          <form class="col s12 m8 offset-m2 l6 offset-l3 card">
+            <div class="row">
+							<h3 class="center">Zaloguj</h3>
+              <div class="input-field col s12 m8 offset-m2">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="Logowanie-login" type="text" class="validate" name='username' required>
+                <label for="Logowanie-login">Login</label>
+              </div>
+              <div class="input-field col s12 m8 offset-m2">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="Logowanie-password" type="password" class="validate" name='password' required>
+                <label for="Logowanie-password">Password</label>
+              </div>
+            </div>
+            <div class="row center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="getLoginFormValues()">Zaloguj
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          </form>
+        </div>
+			</div>
     <!--Skrypty-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../assets/materialize.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script>
+    function getLoginFormValues() {
+      var username = document.forms[0]["username"].value;
+      var password = document.forms[0]["password"].value;
+      var dataLogin = {
+        username: username,
+        password: password
+      };
+      var output = JSON.stringify(dataLogin);
+      return output;
+    };
+    </script>
     <!--END Skrypty-->
   </body>
 </html>
